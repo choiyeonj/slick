@@ -1,0 +1,306 @@
+@charset "UTF-8";
+
+/* font-family: 'Josefin Sans', sans-serif; */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.container {
+    width: 1400px;
+    margin: 0 auto;
+}
+
+body {
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8) url(img/Cover_anni40-50_1920x800.jpg) no-repeat;
+    background-size: cover;
+    background-blend-mode: hue;
+}
+
+.wrap {}
+
+
+/* header */
+header {
+    border-bottom: 1px solid #ddd;
+    height: 100px;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+header .container .logo {
+    width: 150px;
+}
+
+header .container .logo a {}
+
+header .container .logo a img {
+    width: 100%;
+}
+
+
+header .container .menu_wrap {}
+
+header .container .menu_wrap ul {
+    display: flex;
+    width: 800px;
+    justify-content: space-between;
+}
+
+header .container .menu_wrap ul li {}
+
+header .container .menu_wrap ul li a {}
+
+
+header .container .search {}
+
+header .container .search a {}
+
+header .container .search a i {}
+
+
+.main {
+    margin-top: 5%;
+}
+
+.main .slick-slide {
+    display: flex;
+    position: relative;
+}
+
+.main .slick-arrow {
+    position: absolute;
+    left: -2%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    font-size: 0;
+    visibility: hidden;
+    color: #38a385;
+    cursor: pointer;
+}
+
+.main .slick-arrow.slick-prev {
+    font-size: 33px;
+}
+
+.main .slick-arrow.slick-prev::before {
+    content: "\f053";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    visibility: visible;
+}
+
+.main .slick-arrow.slick-next {
+    left: auto;
+    right: -2%;
+    font-size: 33px;
+}
+
+.main .slick-arrow.slick-next::before {
+    content: "\f054";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    visibility: visible;
+}
+
+
+
+
+.left_area {
+    width: 50%;
+    height: 80vh;
+}
+
+.right_area {
+    width: 50%;
+    height: 80vh;
+}
+
+.left_area .vespa_img {
+    width: 120%;
+    padding-top: 180px;
+    opacity: 0;
+}
+
+.main .slick-active .left_area .vespa_img {
+    animation: fadeInL 0.5s 0.5s both;
+}
+
+.left_area .vespa_img img {
+    width: 100%;
+}
+
+.left_area .vespa_tit {
+    position: absolute;
+    left: 0;
+    top: 120px;
+    z-index: -1;
+}
+
+.main .slick-active .left_area .vespa_tit {
+    animation: fadeInT 0.7s 0.9s both;
+}
+
+.left_area .vespa_tit h2 {
+    font-size: 130px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.left_area .vespa_tit p {
+    font-size: 19px;
+    color: #fff;
+    letter-spacing: 18px;
+}
+
+.right_area {
+    color: #fff;
+    padding-top: 30%;
+    padding-left: 8%;
+    box-sizing: border-box;
+}
+
+.right_area .middle_txt {}
+
+.right_area .middle_txt ul {
+    padding-left: 5%;
+}
+
+.right_area .middle_txt ul li {
+    position: relative;
+    font-size: 20px;
+    padding-left: 12px;
+    margin-bottom: 10px;
+}
+
+.main .slick-active .right_area .middle_txt ul li{
+    animation: fadeInL 0.5s 1s both;
+}
+
+.main .slick-active .right_area .middle_txt ul li:last-child {
+    animation-delay: 1.2s;
+}
+
+.right_area .middle_txt ul li::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.right_area .bottom_area {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 5%;
+}
+
+.right_area .bottom_area .custom_btn {
+    border: 2px solid #fff;
+    position: relative;
+}
+
+.right_area .bottom_area .custom_btn a {
+    display: block;
+    padding: 10px 50px;
+}
+
+.right_area .bottom_area .custom_btn i {
+    position: absolute;
+    right: 17px;
+    top: 10px;
+}
+
+.right_area .bottom_area .down_btn {
+    background-color: #38a385;
+}
+
+.right_area .bottom_area .down_btn a {
+    display: block;
+    padding: 10px 50px;
+}
+
+.right_area .bottom_area .price {}
+
+.right_area .bottom_area .price span {
+    font-size: 24px;
+    line-height: 42px;
+}
+
+.main .slick-active .right_area .bottom_area .custom_btn {
+    animation: fadeInT 0.5s 1.4s both;
+}
+
+.main .slick-active .right_area .bottom_area .down_btn {
+    animation: fadeInL 0.5s 1.6s both;
+}
+
+.main .slick-active .right_area .bottom_area .price {
+    animation: fadeInR 0.5s 1.8s both;
+}
+
+
+
+
+
+
+
+
+/* 애니메이션 */
+@keyframes fadeInR {
+    0% {
+        transform: translateX(150%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+
+}
+
+@keyframes fadeInL {
+    0% {
+        transform: translateX(-150%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+
+}
+
+@keyframes fadeInT {
+    0% {
+        transform: translateY(-150%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+
+}
